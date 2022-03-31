@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Font/Flavorysansdemo-qZ5K0.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Foto/background.jpg" type="Texture" id=2]
+[ext_resource path="res://Scrip/Home.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 28
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = -4.0
+margin_right = 93.0
+margin_bottom = 146.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pola" type="Button" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 397.0
+margin_top = 123.0
+margin_right = 610.0
+margin_bottom = 181.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 2 )
+text = "Bentuk"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="karya2D" type="Button" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 401.0
+margin_top = 191.0
+margin_right = 614.0
+margin_bottom = 249.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 2 )
+text = "Karya 2D"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lintasan" type="Button" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 398.0
+margin_top = 245.0
+margin_right = 611.0
+margin_bottom = 303.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 2 )
+text = "Lintasan"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Aboutme" type="Button" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 804.0
+margin_top = 273.0
+margin_right = 1017.0
+margin_bottom = 331.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 2 )
+text = "About ME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Pola" to="." method="_on_Ilustrasi_pressed"]
+[connection signal="pressed" from="karya2D" to="." method="_on_Vertikal_pressed"]
+[connection signal="pressed" from="Lintasan" to="." method="_on_Lintasan_pressed"]
+[connection signal="pressed" from="Aboutme" to="." method="_on_Aboutme_pressed"]
